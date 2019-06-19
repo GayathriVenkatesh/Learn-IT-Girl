@@ -1,0 +1,20 @@
+<h1><b> Search Result </b></h1>
+<br>
+<p><%= link_to "Back", new_search_path %></p>
+<% if @search.search_products.empty? %>
+  <h1><p> No Records Found</p></h1>
+<% else %>
+  <% @search.search_products.each do |c| %>
+  <br>
+
+
+  <div class="div">
+    <h1 style=font-size:20px><%= c.title %></h1><br>
+    <h1 style=font-size:15px><p>Price: Rs.<%= c.price %></p></h1>
+    <h1 style=font-size:15px><p>Model: <%= c.model %></p></h1>
+    <h1 style=font-size:15px><p>Condition: <%= c.condition %></p></h1>
+    <p><%= link_to image_tag(c.image_url(:thumb)) %></p><br><br>
+  </div>
+
+  <% end %>
+<% end %>

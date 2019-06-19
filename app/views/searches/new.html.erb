@@ -1,0 +1,34 @@
+<h1 style=font-size:30px><b>Custom Search</b></h1>
+<br>
+
+<%= form_for @search,  html:{class: "pure-form"} do |s| %>
+  <div class="field">
+    <%= s.label :title %><br />
+    <%= s.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= s.label :model %><br />
+    <%= s.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= s.label :condition %><br />
+    <%= s.text_field :condition %>
+  </div>
+
+  <div class="field">
+    <%= s.label :min_price %><br />
+    <%= s.text_field :min_price %>
+  </div>
+
+  <div class="field">
+    <%= s.label :max_price %><br />
+    <%= s.text_field :max_price %>
+  </div>
+
+<br>
+  <div class="action"><%= s.submit "Search", class: "pure-button pure-button-primary" %></div>
+<% end %>
+
+<p><%= link_to 'Back', products_path %></p>
