@@ -50,7 +50,7 @@ group :development, :test do
   gem 'capybara', '~> 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
-  gem 'better_errors', '~> 2.4'
+  gem 'better_errors', '~> 2.8'
   gem 'guard', '~> 2.14', '>= 2.14.1'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
